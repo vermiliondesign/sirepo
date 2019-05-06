@@ -34,19 +34,21 @@
     /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$gradient_right', endColorstr='$gradient_left',GradientType=1 );
     /* IE6-9 */ }
-  .landing nav {
+  .landing header nav {
     display: flex;
     padding: 30px 0;
     align-items: center; }
-    .landing nav .nav-items {
+    .landing header nav .nav-items {
       flex-grow: 1;
       margin: 0;
       text-align: right;
       font-size: 16px; }
-      .landing nav .nav-items li {
+      .landing header nav .nav-items li {
         display: inline-block;
         text-transform: uppercase; }
-      .landing nav .nav-items li ~ li {
+        .landing header nav .nav-items li a {
+          color: white; }
+      .landing header nav .nav-items li ~ li {
         margin-left: 25px; }
   .landing .intro {
     text-align: center;
@@ -78,7 +80,9 @@
         display: block;
         height: 14px;
         width: 68px;
-        background: url("/img/heading-decoration.png") center center no-repeat; }
+        background-image: url("/img/heading-decoration.png");
+        background-position: center center;
+        background-repeat: no-repeat; }
     .landing .content-block h4 {
       color: #0a65c3;
       font-weight: bold;
@@ -125,5 +129,45 @@
       color: #ff6000; }
     .landing .explore .explore-items > article:nth-child(2n + 1) {
       clear: both; }
+  .landing .news-announcements {
+    background-color: white; }
+    .landing .news-announcements .news-announcements-items > article {
+      background-color: #e5e5e5;
+      padding: 35px; }
+      .landing .news-announcements .news-announcements-items > article a {
+        color: #ff6000; }
+      .landing .news-announcements .news-announcements-items > article ~ article {
+        margin-top: 12px; }
+  .landing footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url("/img/footer-bg.jpg");
+    background-color: #666666;
+    background-blend-mode: multiply;
+    padding: 55px;
+    color: #e5e5e5; }
+    .landing footer * {
+      margin: 0; }
+    .landing footer .footer-sirepo {
+      margin-right: 25px; }
+    .landing footer .footer-nav ul {
+      padding: 0; }
+    .landing footer .footer-nav li {
+      display: inline-block; }
+      .landing footer .footer-nav li a {
+        color: #e5e5e5;
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: bold;
+        letter-spacing: 1px; }
+    .landing footer .footer-nav li ~ li {
+      margin-left: 10px; }
+    .landing footer .footer-radiasoft {
+      flex-grow: 1;
+      text-align: right;
+      color: #9b9b9b; }
+      .landing footer .footer-radiasoft p {
+        margin-top: 10px; }
 
 /*# sourceMappingURL=landing.css.map */

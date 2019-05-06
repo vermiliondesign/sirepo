@@ -3,6 +3,9 @@ $blue_dark: #083157;
 $blue_medium: #0a65c3;
 $blue_light: #d9f1f6;
 $orange: #ff6000;
+$gray_light: #e5e5e5;
+$gray_medium: #9b9b9b;
+$gray_dark: #666666;
 
 $gradient_left: #002c54;
 $gradient_right: #00a1c5;
@@ -49,25 +52,31 @@ $gradient_center: #105dad;
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$gradient_right', endColorstr='$gradient_left',GradientType=1 ); /* IE6-9 */
   }
 
-  nav {
-    display: flex;
-    padding: 30px 0;
-    align-items: center;
+  header {
+    nav {
+      display: flex;
+      padding: 30px 0;
+      align-items: center;
 
-    .nav-items {
-      flex-grow: 1;
-      margin: 0;
+      .nav-items {
+        flex-grow: 1;
+        margin: 0;
 
-      text-align: right;
-      font-size: 16px;
+        text-align: right;
+        font-size: 16px;
 
-      li {
-        display: inline-block;
-        text-transform: uppercase;
-      }
+        li {
+          display: inline-block;
+          text-transform: uppercase;
 
-      li ~ li {
-        margin-left: 25px;
+          a {
+            color: white;
+          }
+        }
+
+        li ~ li {
+          margin-left: 25px;
+        }
       }
     }
   }
@@ -118,7 +127,9 @@ $gradient_center: #105dad;
         height: 14px;
         width: 68px;
 
-        background: url('/img/heading-decoration.png') center center no-repeat;
+        background-image: url('/img/heading-decoration.png');
+        background-position: center center;
+        background-repeat: no-repeat;
       }
     }
 
@@ -195,6 +206,79 @@ $gradient_center: #105dad;
     .explore-items {
       & > article:nth-child(2n + 1) {
         clear: both;
+      }
+    }
+  }
+
+  .news-announcements {
+    background-color: white;
+
+    .news-announcements-items {
+      & > article {
+        background-color: $gray_light;
+        padding: 35px;
+
+        a {
+          color: $orange;
+        }
+
+        & ~ article {
+          margin-top: 12px;
+        }
+      }
+    }
+  }
+
+  footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: url('/img/footer-bg.jpg');
+    background-color: $gray_dark;
+    background-blend-mode: multiply;
+
+    padding: 55px;
+
+    color: $gray_light;
+
+    * {
+      margin: 0;
+    }
+
+    .footer-sirepo {
+      margin-right: 25px;
+    }
+
+    .footer-nav {
+      ul {
+        padding: 0;
+      }
+
+      li {
+        display: inline-block;
+
+        a {
+          color: $gray_light;
+          text-transform: uppercase;
+          font-size: 14px;
+          font-weight: bold;
+          letter-spacing: 1px;
+        }
+      }
+
+      li ~ li {
+        margin-left: 10px;
+      }
+    }
+
+    .footer-radiasoft {
+      flex-grow: 1;
+      text-align: right;
+      color: $gray_medium;
+
+      p {
+        margin-top: 10px;
       }
     }
   }
