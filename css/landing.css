@@ -1,0 +1,129 @@
+.landing {
+  padding-bottom: 60px; }
+  .landing {
+    background: #002c54;
+    /* Old browsers */
+    background: -moz-linear-gradient(left, #002c54 0%, #105dad 50%, #00a1c5 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #002c54 0%, #105dad 50%, #00a1c5 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #002c54 0%, #105dad 50%, #00a1c5 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$gradient_left', endColorstr='$gradient_right',GradientType=1 );
+    /* IE6-9 */
+    font-family: 'Titillium Web', sans-serif;
+    color: white; }
+  .landing .text-bold {
+    font-weight: bold;
+    letter-spacing: 1px; }
+  .landing .text-italic {
+    font-style: italic; }
+  .landing .text-green {
+    color: #8fc741; }
+  .landing .center-block {
+    float: none; }
+  .landing .header-strip {
+    height: 16px;
+    background: #00a1c5;
+    /* Old browsers */
+    background: -moz-linear-gradient(left, #00a1c5 0%, #105dad 50%, #002c54 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #00a1c5 0%, #105dad 50%, #002c54 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #00a1c5 0%, #105dad 50%, #002c54 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$gradient_right', endColorstr='$gradient_left',GradientType=1 );
+    /* IE6-9 */ }
+  .landing nav {
+    display: flex;
+    padding: 30px 0;
+    align-items: center; }
+    .landing nav .nav-items {
+      flex-grow: 1;
+      margin: 0;
+      text-align: right;
+      font-size: 16px; }
+      .landing nav .nav-items li {
+        display: inline-block;
+        text-transform: uppercase; }
+      .landing nav .nav-items li ~ li {
+        margin-left: 25px; }
+  .landing .intro {
+    text-align: center;
+    margin-bottom: 160px; }
+    .landing .intro::before {
+      content: '';
+      display: inline-block;
+      height: 5px;
+      width: 200px;
+      background-color: white; }
+    .landing .intro h2 {
+      font-style: italic;
+      font-weight: 300;
+      font-size: 70px; }
+    .landing .intro p {
+      font-size: 24px; }
+  .landing .header-decoration {
+    background-color: white;
+    height: 54px; }
+  .landing .content-block {
+    padding: 64px 0 128px 0;
+    color: black; }
+    .landing .content-block h3 {
+      color: #083157;
+      font-weight: bold;
+      font-size: 40px; }
+      .landing .content-block h3::before {
+        content: '';
+        display: block;
+        height: 14px;
+        width: 68px;
+        background: url("/img/heading-decoration.png") center center no-repeat; }
+    .landing .content-block h4 {
+      color: #0a65c3;
+      font-weight: bold;
+      font-size: 25px; }
+    .landing .content-block h5 {
+      color: #083157;
+      font-weight: bold;
+      font-size: 25px; }
+    .landing .content-block p {
+      font-size: 16px; }
+    .landing .content-block a {
+      text-transform: uppercase;
+      font-weight: bold;
+      letter-spacing: 1px; }
+      .landing .content-block a::after {
+        content: ' +'; }
+    .landing .content-block .gradient-rule {
+      height: 6px;
+      border: none;
+      background: #00a1c5;
+      /* Old browsers */
+      background: -moz-linear-gradient(left, #00a1c5 0%, #105dad 50%, #002c54 100%);
+      /* FF3.6-15 */
+      background: -webkit-linear-gradient(left, #00a1c5 0%, #105dad 50%, #002c54 100%);
+      /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(to right, #00a1c5 0%, #105dad 50%, #002c54 100%);
+      /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ }
+  .landing .simulations {
+    background-color: white; }
+    .landing .simulations .simulation-items img {
+      width: 100%; }
+    .landing .simulations .simulation-links > div {
+      display: flex;
+      justify-content: space-between; }
+    .landing .simulations .simulation-links a {
+      width: calc(50% - 10px);
+      padding: 10px 0;
+      background-color: #ff6000;
+      color: white;
+      text-align: center; }
+  .landing .explore {
+    background-color: #d9f1f6; }
+    .landing .explore a {
+      color: #ff6000; }
+    .landing .explore .explore-items > article:nth-child(2n + 1) {
+      clear: both; }
+
+/*# sourceMappingURL=landing.css.map */
