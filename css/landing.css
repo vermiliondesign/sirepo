@@ -1,5 +1,7 @@
 .landing {
-  padding-bottom: 60px; }
+  padding-bottom: 60px;
+  /** General Styles */
+  /** End General Styles */ }
   .landing {
     background: #002c54;
     /* Old browsers */
@@ -22,6 +24,34 @@
     color: #8fc741; }
   .landing .center-block {
     float: none; }
+  .landing h3 {
+    color: #083157;
+    font-weight: bold;
+    font-size: 40px; }
+    .landing h3::before {
+      content: '';
+      display: block;
+      height: 14px;
+      width: 68px;
+      background-image: url("/img/heading-decoration.png");
+      background-position: center center;
+      background-repeat: no-repeat; }
+  .landing h4 {
+    color: #0a65c3;
+    font-weight: bold;
+    font-size: 25px; }
+  .landing h5 {
+    color: #083157;
+    font-weight: bold;
+    font-size: 25px; }
+  .landing p {
+    font-size: 16px; }
+  .landing a {
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px; }
+    .landing a:hover {
+      text-decoration: none; }
   .landing .header-strip {
     height: 16px;
     background: #00a1c5;
@@ -34,22 +64,66 @@
     /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$gradient_right', endColorstr='$gradient_left',GradientType=1 );
     /* IE6-9 */ }
-  .landing header nav {
+  .landing header .main-nav {
     display: flex;
     padding: 30px 0;
     align-items: center; }
-    .landing header nav .nav-items {
+    .landing header .main-nav .nav-items {
       flex-grow: 1;
       margin: 0;
       text-align: right;
       font-size: 16px; }
-      .landing header nav .nav-items li {
+      .landing header .main-nav .nav-items li {
         display: inline-block;
         text-transform: uppercase; }
-        .landing header nav .nav-items li a {
+        .landing header .main-nav .nav-items li a {
           color: white; }
-      .landing header nav .nav-items li ~ li {
+          .landing header .main-nav .nav-items li a::after {
+            content: none; }
+      .landing header .main-nav .nav-items li ~ li {
         margin-left: 25px; }
+    .landing header .main-nav .supported-codes > * {
+      vertical-align: middle; }
+  .landing .nav-takeover {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 9999;
+    padding-top: 160px;
+    background: #00a1c5;
+    /* Old browsers */
+    background: -moz-linear-gradient(left, #00a1c5 0%, #105dad 50%, #002c54 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #00a1c5 0%, #105dad 50%, #002c54 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #00a1c5 0%, #105dad 50%, #002c54 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$gradient_right', endColorstr='$gradient_left',GradientType=1 );
+    /* IE6-9 */ }
+    .landing .nav-takeover .nav-takeover-close {
+      position: absolute;
+      top: 40px;
+      right: 40px; }
+    .landing .nav-takeover .nav-takeover-content {
+      width: 100%;
+      text-align: center; }
+      .landing .nav-takeover .nav-takeover-content h6 {
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        font-size: 16px; }
+      .landing .nav-takeover .nav-takeover-content ul {
+        padding: 0;
+        margin: 0;
+        list-style-type: none; }
+        .landing .nav-takeover .nav-takeover-content ul a {
+          font-size: 56px;
+          font-weight: normal;
+          text-transform: none;
+          color: #4cdfff; }
+          .landing .nav-takeover .nav-takeover-content ul a:hover {
+            color: white; }
   .landing .intro {
     text-align: center;
     margin-bottom: 160px; }
@@ -71,34 +145,8 @@
   .landing .content-block {
     padding: 64px 0 128px 0;
     color: black; }
-    .landing .content-block h3 {
-      color: #083157;
-      font-weight: bold;
-      font-size: 40px; }
-      .landing .content-block h3::before {
-        content: '';
-        display: block;
-        height: 14px;
-        width: 68px;
-        background-image: url("/img/heading-decoration.png");
-        background-position: center center;
-        background-repeat: no-repeat; }
-    .landing .content-block h4 {
-      color: #0a65c3;
-      font-weight: bold;
-      font-size: 25px; }
-    .landing .content-block h5 {
-      color: #083157;
-      font-weight: bold;
-      font-size: 25px; }
-    .landing .content-block p {
-      font-size: 16px; }
-    .landing .content-block a {
-      text-transform: uppercase;
-      font-weight: bold;
-      letter-spacing: 1px; }
-      .landing .content-block a::after {
-        content: ' +'; }
+    .landing .content-block a::after {
+      content: ' +'; }
     .landing .content-block .gradient-rule {
       height: 6px;
       border: none;
@@ -152,7 +200,8 @@
     .landing footer .footer-sirepo {
       margin-right: 25px; }
     .landing footer .footer-nav ul {
-      padding: 0; }
+      padding: 0;
+      text-align: center; }
     .landing footer .footer-nav li {
       display: inline-block; }
       .landing footer .footer-nav li a {

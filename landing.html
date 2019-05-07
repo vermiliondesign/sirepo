@@ -14,18 +14,40 @@
 
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
   <link href="/css/landing.css" rel="stylesheet">
+
+  <script
+    src="https://code.jquery.com/jquery-2.2.4.min.js"
+    integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+    crossorigin="anonymous"></script>
+  <script src="/js/landing.js"></script>
 </head>
 <body class="landing">
   <div class="header-strip"></div>
   <div class="container">
     <header>
-      <nav class="navbar navbar-static-top">
+      <nav class="navbar navbar-static-top main-nav">
         <img src="/img/sirepo-by-radiasoft-logo.png" class="logo" alt="Sirepo" />
         <ul class="nav-items text-bold">
-          <li><a class="supported-codes" href="#">Supported Codes</a></li>
+          <li><a class="supported-codes" href="#"><span>Supported Codes</span> <img src="/img/arrow-down.png" /></a></li>
           <li><a href="#">Contact Us</a></li>
           <li><a href="http://radiasoft.net/" target="_blank" rel="noopener noreferrer">RadiaSoft Home</a></li>
         </ul>
+      </nav>
+
+      <nav class="nav-takeover hidden">
+        <a href="#" class="nav-takeover-close"><img src="/img/nav-close.png" alt="Close"/></a>
+          <div class="nav-takeover-content">
+          <h6>Supported Codes</h6>
+          <ul>
+            <li><a href="">elegant</a></li>
+            <li><a href="">RsVND</a></li>
+            <li><a href="">Shadow3</a></li>
+            <li><a href="">SRW</a></li>
+            <li><a href="">Synergia</a></li>
+            <li><a href="">Warp</a></li>
+            <li><a href="">Zgoubi</a></li>
+          </ul>
+        </div>
       </nav>
     </header>
 
@@ -53,14 +75,14 @@
 
           <div class="row simulation-items">
             <div class="col-xs-6">
-              <img src="img/landing/particle-accelerators.jpg" alt="Particle Accelerators" />
+              <img src="/img/landing/particle-accelerators.jpg" alt="Particle Accelerators" />
               <h4>Particle Accelerators</h4>
               <p>
                   Simulate charged particle accelerators with a range of features, including support for nonlinear optimization and design.
               </p>
             </div>
             <div class="col-xs-6">
-                <img src="img/landing/xray-beamlines.jpg" alt="X-ray Beamlines" />
+                <img src="/img/landing/xray-beamlines.jpg" alt="X-ray Beamlines" />
                 <h4>X-ray Beamlines</h4>
                 <p>
                     Compute synchrotron radiation from relativistic electrons in arbitrary magnetic fields and the propagation of radiation wavefronts through optical beamlines.

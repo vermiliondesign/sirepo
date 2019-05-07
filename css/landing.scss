@@ -2,6 +2,7 @@ $green: #8fc741;
 $blue_dark: #083157;
 $blue_medium: #0a65c3;
 $blue_light: #d9f1f6;
+$blue_nav: #4cdfff;
 $orange: #ff6000;
 $gray_light: #e5e5e5;
 $gray_medium: #9b9b9b;
@@ -25,6 +26,7 @@ $gradient_center: #105dad;
     color: white;
   }
 
+  /** General Styles */
   .text-bold {
     font-weight: bold;
     letter-spacing: 1px;
@@ -42,6 +44,50 @@ $gradient_center: #105dad;
     float: none;
   }
 
+  h3 {
+    color: $blue_dark;
+    font-weight: bold;
+    font-size: 40px;
+
+    &::before {
+      content: '';
+      display: block;
+      height: 14px;
+      width: 68px;
+
+      background-image: url('/img/heading-decoration.png');
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+  }
+
+  h4 {
+    color: $blue_medium;
+    font-weight: bold;
+    font-size: 25px;
+  }
+
+  h5 {
+    color: $blue_dark;
+    font-weight: bold;
+    font-size: 25px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  a {
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  /** End General Styles */
+
   .header-strip {
     height: 16px;
 
@@ -53,7 +99,7 @@ $gradient_center: #105dad;
   }
 
   header {
-    nav {
+    .main-nav {
       display: flex;
       padding: 30px 0;
       align-items: center;
@@ -71,11 +117,69 @@ $gradient_center: #105dad;
 
           a {
             color: white;
+
+            &::after {
+              content: none;
+            }
           }
         }
 
         li ~ li {
           margin-left: 25px;
+        }
+      }
+
+      .supported-codes > * {
+        vertical-align: middle;
+      }
+    }
+  }
+
+  .nav-takeover {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 9999;
+    padding-top: 160px;
+
+    background: $gradient_right; /* Old browsers */
+    background: -moz-linear-gradient(left, $gradient_right 0%, $gradient_center 50%, $gradient_left 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, $gradient_right 0%,$gradient_center 50%,$gradient_left 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, $gradient_right 0%,$gradient_center 50%,$gradient_left 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$gradient_right', endColorstr='$gradient_left',GradientType=1 ); /* IE6-9 */
+
+    .nav-takeover-close {
+      position: absolute;
+      top: 40px;
+      right: 40px;
+    }
+
+    .nav-takeover-content {
+      width: 100%;
+      text-align: center;
+
+      h6 {
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        font-size: 16px;
+      }
+
+      ul {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+
+        a {
+          font-size: 56px;
+          font-weight: normal;
+          text-transform: none;
+          color: $blue_nav;
+
+          &:hover {
+            color: white;
+          }
         }
       }
     }
@@ -116,47 +220,8 @@ $gradient_center: #105dad;
     padding: 64px 0 128px 0;
     color: black;
 
-    h3 {
-      color: $blue_dark;
-      font-weight: bold;
-      font-size: 40px;
-
-      &::before {
-        content: '';
-        display: block;
-        height: 14px;
-        width: 68px;
-
-        background-image: url('/img/heading-decoration.png');
-        background-position: center center;
-        background-repeat: no-repeat;
-      }
-    }
-
-    h4 {
-      color: $blue_medium;
-      font-weight: bold;
-      font-size: 25px;
-    }
-
-    h5 {
-      color: $blue_dark;
-      font-weight: bold;
-      font-size: 25px;
-    }
-
-    p {
-      font-size: 16px;
-    }
-
-    a {
-      text-transform: uppercase;
-      font-weight: bold;
-      letter-spacing: 1px;
-
-      &::after {
-        content: ' +';
-      }
+    a::after {
+      content: ' +';
     }
 
     .gradient-rule {
@@ -253,6 +318,7 @@ $gradient_center: #105dad;
     .footer-nav {
       ul {
         padding: 0;
+        text-align: center;
       }
 
       li {
