@@ -24,6 +24,16 @@
     color: #8fc741; }
   .landing .center-block {
     float: none; }
+  .landing h1 {
+    color: #8fc741;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    font-size: 20px;
+    font-weight: bold; }
+  .landing h2 {
+    font-style: italic;
+    font-weight: 300;
+    font-size: 70px; }
   .landing h3 {
     color: #083157;
     font-weight: bold;
@@ -44,7 +54,11 @@
     color: #083157;
     font-weight: bold;
     font-size: 25px; }
-  .landing p {
+  .landing h6 {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 16px; }
+  .landing p, .landing li {
     font-size: 16px; }
   .landing a {
     text-transform: uppercase;
@@ -52,6 +66,25 @@
     letter-spacing: 1px; }
     .landing a:hover {
       text-decoration: none; }
+  .landing .btn-link {
+    display: inline-block;
+    color: white;
+    background-color: #ff6000;
+    padding: 10px 50px;
+    font-size: 14px; }
+    .landing .btn-link.full-width {
+      padding-left: 10px;
+      padding-right: 10px;
+      width: 100%;
+      text-align: center; }
+    .landing .btn-link::after {
+      content: '+'; }
+  .landing code {
+    font-family: "Courier New", Courier, monospace;
+    color: black;
+    background: none; }
+  .landing hr {
+    border-top-color: #9b9b9b; }
   .landing .header-strip {
     height: 16px;
     background: #00a1c5;
@@ -110,10 +143,6 @@
     .landing .nav-takeover .nav-takeover-content {
       width: 100%;
       text-align: center; }
-      .landing .nav-takeover .nav-takeover-content h6 {
-        text-transform: uppercase;
-        letter-spacing: 4px;
-        font-size: 16px; }
       .landing .nav-takeover .nav-takeover-content ul {
         padding: 0;
         margin: 0;
@@ -134,12 +163,12 @@
       height: 5px;
       width: 200px;
       background-color: white; }
-    .landing .intro h2 {
-      font-style: italic;
-      font-weight: 300;
-      font-size: 70px; }
     .landing .intro p {
       font-size: 24px; }
+    .landing .intro .btn-link {
+      margin-top: 25px;
+      padding: 10px 75px;
+      font-size: 17px; }
   .landing .header-decoration {
     background-color: white;
     height: 54px; }
@@ -159,6 +188,17 @@
       /* Chrome10-25,Safari5.1-6 */
       background: linear-gradient(to right, #00a1c5 0%, #105dad 50%, #002c54 100%);
       /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ }
+      .landing .content-block .gradient-rule.light {
+        background: white;
+        /* Old browsers */
+        background: -moz-linear-gradient(left, white 0%, #7fd0e2 50%, #0098c3 100%);
+        /* FF3.6-15 */
+        background: -webkit-linear-gradient(left, white 0%, #7fd0e2 50%, #0098c3 100%);
+        /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to right, white 0%, #7fd0e2 50%, #0098c3 100%);
+        /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$gradient_left_light', endColorstr='$gradient_right_light',GradientType=1 );
+        /* IE6-9 */ }
   .landing .simulations {
     background-color: white; }
     .landing .simulations .simulation-items img {
@@ -187,6 +227,126 @@
         color: #ff6000; }
       .landing .news-announcements .news-announcements-items > article ~ article {
         margin-top: 12px; }
+  .landing .discover {
+    background-color: white;
+    background-image: url("/img/discover-bg.jpg");
+    background-position: left bottom;
+    background-repeat: no-repeat; }
+    .landing .discover .discover-item {
+      position: relative; }
+      .landing .discover .discover-item img {
+        width: 100%; }
+    .landing .discover .discover-item ~ .discover-item {
+      margin-top: 40px; }
+      .landing .discover .discover-item ~ .discover-item::before {
+        content: '';
+        display: block;
+        border-top: 1px solid #9b9b9b;
+        margin: 0 15px 40px 15px; }
+  .landing .perks {
+    background-color: #d9f1f6;
+    background-image: url("/img/perks-bg.jpg");
+    background-position: right top;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply; }
+    .landing .perks .perks-items {
+      text-align: center; }
+  .landing .get-started {
+    background-color: #0a65c3;
+    color: white; }
+    .landing .get-started h3, .landing .get-started h4, .landing .get-started p {
+      color: white; }
+    .landing .get-started h3::before {
+      background-image: url("/img/heading-decoration-dark.png"); }
+    .landing .get-started img {
+      width: calc(100% - 8px);
+      box-shadow: 8px 8px rgba(8, 49, 87, 0.5); }
+    .landing .get-started .get-started-intro {
+      position: relative; }
+      .landing .get-started .get-started-intro .get-started-next,
+      .landing .get-started .get-started-intro .get-started-prev {
+        position: absolute;
+        top: 50%;
+        margin-top: -50px;
+        border-top: 50px solid transparent;
+        border-bottom: 50px solid transparent;
+        cursor: pointer; }
+        .landing .get-started .get-started-intro .get-started-next::after,
+        .landing .get-started .get-started-intro .get-started-prev::after {
+          content: '';
+          position: absolute;
+          margin-top: -50px;
+          border-top: 50px solid transparent;
+          border-bottom: 50px solid transparent; }
+      .landing .get-started .get-started-intro .get-started-next {
+        border-left: 30px solid #74a7d6;
+        right: -65px; }
+        .landing .get-started .get-started-intro .get-started-next::after {
+          left: -31px;
+          border-left: 30px solid #0a65c3; }
+      .landing .get-started .get-started-intro .get-started-prev {
+        border-right: 30px solid #74a7d6;
+        left: -65px; }
+        .landing .get-started .get-started-intro .get-started-prev::after {
+          right: -31px;
+          border-right: 30px solid #0a65c3; }
+    .landing .get-started .get-started-steps {
+      display: flex;
+      justify-content: space-between; }
+    .landing .get-started i {
+      display: inline-block;
+      font-style: normal;
+      color: white;
+      background-color: #00a2c5;
+      height: 60px;
+      width: 60px;
+      line-height: 60px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 20px;
+      border-radius: 30px;
+      cursor: pointer; }
+      .landing .get-started i.active {
+        color: #0a65c3;
+        background-color: white; }
+    .landing .get-started .simulation-demos-intro {
+      margin-top: 60px; }
+      .landing .get-started .simulation-demos-intro::before {
+        content: '';
+        display: block;
+        border-top: 1px solid #3475b0;
+        margin: 0 15px 40px 15px; }
+    .landing .get-started .simulation-demos {
+      margin-top: 20px; }
+      .landing .get-started .simulation-demos a {
+        margin-top: 25px; }
+  .landing .publications {
+    background-color: white;
+    padding-bottom: 40px; }
+    .landing .publications ul {
+      list-style: none;
+      padding-left: 20px; }
+      .landing .publications ul li::before {
+        content: "\2022";
+        color: #00a2c5;
+        display: inline-block;
+        font-weight: bold;
+        width: 20px;
+        margin-left: -20px; }
+      .landing .publications ul li ~ li {
+        margin-top: 10px; }
+  .landing .doe-footer {
+    background-color: white;
+    padding-bottom: 80px; }
+    .landing .doe-footer .doe-footer-content {
+      padding-top: 20px;
+      display: flex;
+      align-items: center; }
+      .landing .doe-footer .doe-footer-content p {
+        flex-grow: 1;
+        margin: 0 0 0 45px;
+        font-size: 12px;
+        color: #9b9b9b; }
   .landing footer {
     display: flex;
     align-items: center;
