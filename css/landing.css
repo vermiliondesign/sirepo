@@ -1,7 +1,12 @@
 .landing {
-  padding-bottom: 60px;
   /** General Styles */
   /** End General Styles */ }
+  .landing .max-width-container {
+    padding: 0 60px 60px 60px; }
+  .landing .row {
+    position: relative;
+    max-width: 1300px;
+    margin: 0 auto; }
   .landing {
     background: linear-gradient(to right, #002c54 0%, #105dad 50%, #00a1c5 100%);
     font-family: 'Titillium Web', sans-serif;

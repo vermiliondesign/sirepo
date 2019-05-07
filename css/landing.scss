@@ -21,7 +21,16 @@ $gradient_center_light: #7fd0e2;
 $header_strip_height: 16px;
 
 .landing {
-  padding-bottom: 60px;
+
+  .max-width-container {
+    padding: 0 60px 60px 60px;
+  }
+
+  .row {
+    position: relative;
+    max-width: 1300px;
+    margin: 0 auto;
+  }
 
   & {
     background: linear-gradient(to right, $gradient_left 0%,$gradient_center 50%,$gradient_right 100%);
