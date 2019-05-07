@@ -26,12 +26,6 @@ $header_strip_height: 16px;
     padding: 0 60px 60px 60px;
   }
 
-  .row {
-    position: relative;
-    max-width: 1300px;
-    margin: 0 auto;
-  }
-
   & {
     background: linear-gradient(to right, $gradient_left 0%,$gradient_center 50%,$gradient_right 100%);
     font-family: 'Titillium Web', sans-serif;
@@ -239,18 +233,24 @@ $header_strip_height: 16px;
   }
 
   .intro {
-    text-align: center;
     margin-bottom: 160px;
 
     &::before {
       content: '';
 
-      display: inline-block;
+      display: block;
 
       height: 5px;
       width: 200px;
 
+      margin: 0 auto;
+
       background-color: white;
+    }
+
+    .intro-content {
+      text-align: center;
+      color: white;
     }
 
     p {
@@ -272,6 +272,15 @@ $header_strip_height: 16px;
   .content-block {
     padding: 64px 0 128px 0;
     color: black;
+    text-align: center;
+
+    > .row {
+      display: inline-block;
+      position: relative;
+      width: 100%;
+      max-width: 1300px;
+      text-align: left;
+    }
 
     a::after {
       content: ' +';
@@ -293,16 +302,24 @@ $header_strip_height: 16px;
     background-color: white;
 
     .simulation-items {
+      display: flex;
       img {
         width: 100%;
       }
     }
 
-    .simulation-links {
-      & > div {
-        display: flex;
-        justify-content: space-between;
+    .simulation-item {
+      display: flex;
+      flex-direction: column;
+
+      p {
+        flex-grow: 1;
       }
+    }
+
+    .simulation-links {
+      display: flex;
+      justify-content: space-between;
 
       a {
         width: calc(50% - 10px);
@@ -530,8 +547,11 @@ $header_strip_height: 16px;
       display: flex;
       align-items: center;
 
-      p {
+      .doe-footer-image-container {
         flex-grow: 1;
+      }
+
+      p {
         margin: 0 0 0 45px;
         font-size: 12px;
         color: $gray_medium;

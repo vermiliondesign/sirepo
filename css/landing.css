@@ -3,10 +3,6 @@
   /** End General Styles */ }
   .landing .max-width-container {
     padding: 0 60px 60px 60px; }
-  .landing .row {
-    position: relative;
-    max-width: 1300px;
-    margin: 0 auto; }
   .landing {
     background: linear-gradient(to right, #002c54 0%, #105dad 50%, #00a1c5 100%);
     font-family: 'Titillium Web', sans-serif;
@@ -136,14 +132,17 @@
           .landing .nav-takeover .nav-takeover-content ul a:hover {
             color: white; }
   .landing .intro {
-    text-align: center;
     margin-bottom: 160px; }
     .landing .intro::before {
       content: '';
-      display: inline-block;
+      display: block;
       height: 5px;
       width: 200px;
+      margin: 0 auto;
       background-color: white; }
+    .landing .intro .intro-content {
+      text-align: center;
+      color: white; }
     .landing .intro p {
       font-size: 24px; }
     .landing .intro .btn-link {
@@ -155,7 +154,14 @@
     height: 54px; }
   .landing .content-block {
     padding: 64px 0 128px 0;
-    color: black; }
+    color: black;
+    text-align: center; }
+    .landing .content-block > .row {
+      display: inline-block;
+      position: relative;
+      width: 100%;
+      max-width: 1300px;
+      text-align: left; }
     .landing .content-block a::after {
       content: ' +'; }
     .landing .content-block .gradient-rule {
@@ -166,17 +172,24 @@
         background: linear-gradient(to right, white 0%, #7fd0e2 50%, #0098c3 100%); }
   .landing .simulations {
     background-color: white; }
-    .landing .simulations .simulation-items img {
-      width: 100%; }
-    .landing .simulations .simulation-links > div {
+    .landing .simulations .simulation-items {
+      display: flex; }
+      .landing .simulations .simulation-items img {
+        width: 100%; }
+    .landing .simulations .simulation-item {
+      display: flex;
+      flex-direction: column; }
+      .landing .simulations .simulation-item p {
+        flex-grow: 1; }
+    .landing .simulations .simulation-links {
       display: flex;
       justify-content: space-between; }
-    .landing .simulations .simulation-links a {
-      width: calc(50% - 10px);
-      padding: 10px 0;
-      background-color: #ff6000;
-      color: white;
-      text-align: center; }
+      .landing .simulations .simulation-links a {
+        width: calc(50% - 10px);
+        padding: 10px 0;
+        background-color: #ff6000;
+        color: white;
+        text-align: center; }
   .landing .explore {
     background-color: #d9f1f6; }
     .landing .explore a {
@@ -307,8 +320,9 @@
       padding-top: 20px;
       display: flex;
       align-items: center; }
+      .landing .doe-footer .doe-footer-content .doe-footer-image-container {
+        flex-grow: 1; }
       .landing .doe-footer .doe-footer-content p {
-        flex-grow: 1;
         margin: 0 0 0 45px;
         font-size: 12px;
         color: #9b9b9b; }
