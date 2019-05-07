@@ -3,18 +3,12 @@
   /** General Styles */
   /** End General Styles */ }
   .landing {
-    background: #002c54;
-    /* Old browsers */
-    background: -moz-linear-gradient(left, #002c54 0%, #105dad 50%, #00a1c5 100%);
-    /* FF3.6-15 */
-    background: -webkit-linear-gradient(left, #002c54 0%, #105dad 50%, #00a1c5 100%);
-    /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(to right, #002c54 0%, #105dad 50%, #00a1c5 100%);
-    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$gradient_left', endColorstr='$gradient_right',GradientType=1 );
-    /* IE6-9 */
     font-family: 'Titillium Web', sans-serif;
     color: white; }
+  .landing.particle-accelerators {
+    background: linear-gradient(to right, #002c54 0%, #105dad 50%, #00a1c5 100%), url("/img/particle-accelerators/header-bg.jpg") center 16px/100% auto no-repeat;
+    background-blend-mode: multiply; }
   .landing .text-bold {
     font-weight: bold;
     letter-spacing: 1px; }
@@ -87,16 +81,7 @@
     border-top-color: #9b9b9b; }
   .landing .header-strip {
     height: 16px;
-    background: #00a1c5;
-    /* Old browsers */
-    background: -moz-linear-gradient(left, #00a1c5 0%, #105dad 50%, #002c54 100%);
-    /* FF3.6-15 */
-    background: -webkit-linear-gradient(left, #00a1c5 0%, #105dad 50%, #002c54 100%);
-    /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to right, #00a1c5 0%, #105dad 50%, #002c54 100%);
-    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$gradient_right', endColorstr='$gradient_left',GradientType=1 );
-    /* IE6-9 */ }
+    background: linear-gradient(to right, #00a1c5 0%, #105dad 50%, #002c54 100%); }
   .landing header .main-nav {
     display: flex;
     padding: 30px 0;
@@ -126,16 +111,7 @@
     width: 100vw;
     z-index: 9999;
     padding-top: 160px;
-    background: #00a1c5;
-    /* Old browsers */
-    background: -moz-linear-gradient(left, #00a1c5 0%, #105dad 50%, #002c54 100%);
-    /* FF3.6-15 */
-    background: -webkit-linear-gradient(left, #00a1c5 0%, #105dad 50%, #002c54 100%);
-    /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to right, #00a1c5 0%, #105dad 50%, #002c54 100%);
-    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$gradient_right', endColorstr='$gradient_left',GradientType=1 );
-    /* IE6-9 */ }
+    background: linear-gradient(to right, #00a1c5 0%, #105dad 50%, #002c54 100%); }
     .landing .nav-takeover .nav-takeover-close {
       position: absolute;
       top: 40px;
@@ -180,25 +156,9 @@
     .landing .content-block .gradient-rule {
       height: 6px;
       border: none;
-      background: #00a1c5;
-      /* Old browsers */
-      background: -moz-linear-gradient(left, #00a1c5 0%, #105dad 50%, #002c54 100%);
-      /* FF3.6-15 */
-      background: -webkit-linear-gradient(left, #00a1c5 0%, #105dad 50%, #002c54 100%);
-      /* Chrome10-25,Safari5.1-6 */
-      background: linear-gradient(to right, #00a1c5 0%, #105dad 50%, #002c54 100%);
-      /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ }
+      background: linear-gradient(to right, #00a1c5 0%, #105dad 50%, #002c54 100%); }
       .landing .content-block .gradient-rule.light {
-        background: white;
-        /* Old browsers */
-        background: -moz-linear-gradient(left, white 0%, #7fd0e2 50%, #0098c3 100%);
-        /* FF3.6-15 */
-        background: -webkit-linear-gradient(left, white 0%, #7fd0e2 50%, #0098c3 100%);
-        /* Chrome10-25,Safari5.1-6 */
-        background: linear-gradient(to right, white 0%, #7fd0e2 50%, #0098c3 100%);
-        /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$gradient_left_light', endColorstr='$gradient_right_light',GradientType=1 );
-        /* IE6-9 */ }
+        background: linear-gradient(to right, white 0%, #7fd0e2 50%, #0098c3 100%); }
   .landing .simulations {
     background-color: white; }
     .landing .simulations .simulation-items img {
