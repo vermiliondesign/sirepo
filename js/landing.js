@@ -1,9 +1,9 @@
 $(function() {
-  $('.supported-codes').on('click', function() {
-    $('.nav-takeover').removeClass('hidden');
+  $('.landing .supported-codes').on('click', function() {
+    $('.landing .nav-takeover').removeClass('hidden');
   });
 
-  $('.nav-takeover-close').on('click', function() {
-    $('.nav-takeover').addClass('hidden');
+  $('.landing .nav-takeover-close').on('click', function() {
+    $('.landing .nav-takeover').addClass('hidden');
   });
 });

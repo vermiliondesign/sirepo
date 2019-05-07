@@ -540,21 +540,25 @@ $header_strip_height: 16px;
   }
 
   footer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
     background: url('/img/footer-bg.jpg');
     background-color: $gray_dark;
     background-blend-mode: multiply;
-
-    padding: 55px;
+    background-size: cover;
 
     color: $gray_light;
 
-    * {
-      margin: 0;
+    .footer-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      * {
+        margin: 0;
+      }
+
     }
+
+    padding: 55px;
 
     .footer-sirepo {
       margin-right: 25px;
