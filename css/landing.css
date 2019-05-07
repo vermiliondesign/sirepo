@@ -75,7 +75,8 @@
       font-size: 16px; }
       .landing header .main-nav .nav-items li {
         display: inline-block;
-        text-transform: uppercase; }
+        text-transform: uppercase;
+        vertical-align: middle; }
         .landing header .main-nav .nav-items li a {
           color: white; }
           .landing header .main-nav .nav-items li a::after {
