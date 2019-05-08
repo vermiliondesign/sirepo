@@ -69,21 +69,39 @@
       text-decoration: none;
       color: #005eb4; }
   .landing .btn-link {
+    position: relative;
     display: inline-block;
     color: white;
     background-color: #ff6000;
     padding: 10px 50px;
-    font-size: 14px; }
+    font-size: 14px;
+    overflow: hidden; }
     .landing .btn-link.full-width {
       padding-left: 10px;
       padding-right: 10px;
       width: 100%;
       text-align: center; }
+    .landing .btn-link span {
+      position: relative; }
+    .landing .btn-link::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 100%;
+      height: 100%;
+      width: calc(100% + 25px);
+      border-top-left-radius: 25px;
+      border-bottom-left-radius: 25px;
+      background-color: #005eb4;
+      transition: left 500ms;
+      z-index: 0; }
     .landing .btn-link:hover {
-      color: white;
-      background-color: #005eb4; }
+      color: white; }
+      .landing .btn-link:hover::before {
+        left: -25px; }
     .landing .btn-link::after {
-      content: '\00A0+'; }
+      content: '\00A0+';
+      position: relative; }
   .landing code {
     font-family: "Courier New", Courier, monospace;
     color: black;
@@ -99,6 +117,8 @@
     align-items: center; }
     .landing header .main-nav img {
       max-width: 100%; }
+    .landing header .main-nav .home-link:hover {
+      filter: brightness(0) invert(1); }
     .landing header .main-nav .nav-items {
       flex-grow: 1;
       margin: 0;
@@ -228,7 +248,7 @@
       margin-top: 25px;
       padding: 10px 75px;
       font-size: 17px; }
-      .landing .intro .btn-link:hover {
+      .landing .intro .btn-link::before {
         background-color: #00a2c5; }
   .landing .header-decoration {
     position: relative;
@@ -315,7 +335,7 @@
       .landing .discover .discover-item ~ .discover-item::before {
         content: '';
         display: block;
-        border-top: 1px solid #9b9b9b;
+        border-top: 2px solid #9b9b9b;
         margin: 0 15px 40px 15px; }
   .landing .perks {
     background-color: #d9f1f6;
@@ -349,7 +369,7 @@
       color: white; }
     .landing .get-started h3::before {
       background-image: url("/img/heading-decoration-dark.png"); }
-    .landing .get-started .btn-link:hover {
+    .landing .get-started .btn-link::before {
       background-color: #00a2c5; }
     .landing .get-started .row {
       z-index: 2; }
@@ -375,13 +395,13 @@
       border-left: 30px solid #74a7d6;
       right: -65px; }
       .landing .get-started .get-started-next::after {
-        left: -31px;
+        left: -32px;
         border-left: 30px solid #005eb4; }
     .landing .get-started .get-started-prev {
       border-right: 30px solid #74a7d6;
       left: -65px; }
       .landing .get-started .get-started-prev::after {
-        right: -31px;
+        right: -32px;
         border-right: 30px solid #005eb4; }
     .landing .get-started .get-started-copy {
       display: flex;
@@ -434,7 +454,7 @@
       .landing .get-started .simulation-demos-intro::before {
         content: '';
         display: block;
-        border-top: 1px solid #3475b0;
+        border-top: 2px solid #74a7d6;
         margin: 0 15px 40px 15px; }
     .landing .get-started .simulation-demos {
       display: flex;
@@ -558,13 +578,13 @@
     border-left: 30px solid #74a7d6;
     right: 25px; }
     .landing .get-started .get-started-next::after {
-      left: -31px;
+      left: -32px;
       border-left: 30px solid #005eb4; }
   .landing .get-started .get-started-prev {
     border-right: 30px solid #74a7d6;
     left: 25px; }
     .landing .get-started .get-started-prev::after {
-      right: -31px;
+      right: -32px;
       border-right: 30px solid #005eb4; } }
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 991px) {
@@ -594,13 +614,13 @@
     border-left: 30px solid #74a7d6;
     right: 0; }
     .landing .get-started .get-started-next::after {
-      left: -31px;
+      left: -32px;
       border-left: 30px solid #005eb4; }
   .landing .get-started .get-started-prev {
     border-right: 30px solid #74a7d6;
     left: 0; }
     .landing .get-started .get-started-prev::after {
-      right: -31px;
+      right: -32px;
       border-right: 30px solid #005eb4; }
   .landing header .main-nav .nav-items {
     margin-top: 20px; }
@@ -662,7 +682,7 @@
       .landing .simulations .simulation-item ~ .simulation-item::before {
         content: '';
         display: block;
-        border-top: 1px solid #9b9b9b;
+        border-top: 2px solid #9b9b9b;
         margin: 0 0 40px 0; }
     .landing .explore::after {
       display: none; }
@@ -702,13 +722,13 @@
         border-left: 15px solid #74a7d6;
         right: 0; }
         .landing .get-started .get-started-next::after {
-          left: -16px;
+          left: -17px;
           border-left: 15px solid #005eb4; }
       .landing .get-started .get-started-prev {
         border-right: 15px solid #74a7d6;
         left: 0; }
         .landing .get-started .get-started-prev::after {
-          right: -16px;
+          right: -17px;
           border-right: 15px solid #005eb4; }
     .landing .doe-footer .doe-footer-content {
       flex-direction: column;

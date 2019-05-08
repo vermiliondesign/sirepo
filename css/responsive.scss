@@ -190,11 +190,11 @@
       .simulation-item ~ .simulation-item {
         margin-top: 40px;
 
-        // Can't use border because of paddingpadding
+        // Can't use border because of padding
         &::before {
           content: '';
           display: block;
-          border-top: 1px solid $gray_medium;
+          border-top: 2px solid $gray_medium;
           margin: 0 0 40px 0;
         }
       }
