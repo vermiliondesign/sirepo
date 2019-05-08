@@ -200,6 +200,12 @@
       }
     }
 
+    .explore {
+      &::after {
+        display: none;
+      }
+    }
+
     .discover {
       padding-bottom: 120px;
     }

@@ -431,11 +431,29 @@
   .explore {
     background-color: $blue_light;
 
+    &::after {
+      content: '';
+      position: absolute;
+      background-image: url('/img/explore-curve-bottom.png');
+      background-position: bottom right;
+
+      bottom: -65px;
+      right: 0;
+
+      height: 315px;
+      width: 1299px;
+      max-width: 100%;
+
+      z-index: 1;
+    }
+
     a {
       color: $orange;
     }
 
     .explore-items {
+      position: relative;
+      z-index: 2;
       & > article:nth-child(2n + 1) {
         clear: both;
       }
