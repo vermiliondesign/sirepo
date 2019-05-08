@@ -130,7 +130,7 @@
     .landing .nav-takeover .nav-takeover-content {
       width: 100%;
       text-align: center;
-      margin-top: 160px; }
+      padding-top: 160px; }
       .landing .nav-takeover .nav-takeover-content ul {
         padding: 0;
         margin: 0;
@@ -555,6 +555,13 @@
       flex-direction: column; }
       .landing header .main-nav .nav-items {
         text-align: center; }
+    .landing .nav-takeover .nav-takeover-close img {
+      height: 30px;
+      width: 30px; }
+    .landing .nav-takeover .nav-takeover-content {
+      padding-top: 90px; }
+      .landing .nav-takeover .nav-takeover-content ul a {
+        font-size: 36px; }
     .landing .intro {
       margin-bottom: 40px; }
       .landing .intro p {

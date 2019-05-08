@@ -112,6 +112,25 @@
       }
     }
 
+    .nav-takeover {
+      .nav-takeover-close {
+        img {
+          height: 30px;
+          width: 30px;
+        }
+      }
+
+      .nav-takeover-content {
+        padding-top: 90px;
+
+        ul {
+          a {
+            font-size: 36px;
+          }
+        }
+      }
+    }
+
     .intro {
       margin-bottom: 40px;
 
