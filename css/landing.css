@@ -433,7 +433,8 @@
       .landing .doe-footer .doe-footer-content .doe-footer-image-container {
         flex-grow: 1; }
         .landing .doe-footer .doe-footer-content .doe-footer-image-container img {
-          width: 100%; }
+          width: 100%;
+          max-width: 281px; }
       .landing .doe-footer .doe-footer-content p {
         margin: 0 0 0 45px;
         font-size: 12px;
@@ -611,6 +612,9 @@
       display: none; }
     .landing .simulations .simulation-items {
       flex-direction: column; }
+    .landing .simulations .simulation-item ~ .simulation-item {
+      padding-top: 40px;
+      margin-top: 40px; }
     .landing .discover {
       padding-bottom: 120px; }
     .landing .get-started {
