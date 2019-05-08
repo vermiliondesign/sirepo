@@ -42,7 +42,7 @@
       background-position: center center;
       background-repeat: no-repeat; }
   .landing h4 {
-    color: #0a65c3;
+    color: #005eb4;
     font-weight: bold;
     font-size: 25px; }
   .landing h5 {
@@ -172,6 +172,7 @@
       height: 279px;
       width: 258px; }
   .landing .content-block {
+    position: relative;
     padding: 64px 0 128px 0;
     color: black;
     text-align: center; }
@@ -249,8 +250,20 @@
     .landing .perks .perks-items {
       text-align: center; }
   .landing .get-started {
-    background-color: #0a65c3;
-    color: white; }
+    background-color: #005eb4;
+    color: white;
+    z-index: 2;
+    background-image: url("/img/get-started-curve-top.png");
+    background-position: left -217px;
+    background-repeat: no-repeat; }
+    .landing .get-started::after {
+      content: '';
+      position: absolute;
+      background-image: url("/img/get-started-curve-bottom.png");
+      bottom: -65px;
+      right: 0;
+      height: 315px;
+      width: 1299px; }
     .landing .get-started h3, .landing .get-started h4, .landing .get-started p {
       color: white; }
     .landing .get-started h3::before {
@@ -258,6 +271,8 @@
     .landing .get-started img {
       width: calc(100% - 8px);
       box-shadow: 8px 8px rgba(8, 49, 87, 0.5); }
+    .landing .get-started .row {
+      z-index: 2; }
     .landing .get-started .get-started-intro {
       position: relative; }
       .landing .get-started .get-started-intro .get-started-next,
@@ -280,13 +295,13 @@
         right: -65px; }
         .landing .get-started .get-started-intro .get-started-next::after {
           left: -31px;
-          border-left: 30px solid #0a65c3; }
+          border-left: 30px solid #005eb4; }
       .landing .get-started .get-started-intro .get-started-prev {
         border-right: 30px solid #74a7d6;
         left: -65px; }
         .landing .get-started .get-started-intro .get-started-prev::after {
           right: -31px;
-          border-right: 30px solid #0a65c3; }
+          border-right: 30px solid #005eb4; }
     .landing .get-started .get-started-steps {
       display: flex;
       justify-content: space-between; }
@@ -304,7 +319,7 @@
       border-radius: 30px;
       cursor: pointer; }
       .landing .get-started i.active {
-        color: #0a65c3;
+        color: #005eb4;
         background-color: white; }
     .landing .get-started .simulation-demos-intro {
       margin-top: 60px; }
