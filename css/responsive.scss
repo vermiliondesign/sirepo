@@ -1,6 +1,15 @@
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1199px) {
   .landing {
+    .header-video {
+      overflow: hidden;
+
+      video {
+        width: 150%;
+        margin-left: -25%;
+      }
+    }
+
     .get-started {
       .get-started-intro {
         display: block;
@@ -42,6 +51,15 @@
       padding: 0 $sm_padding $sm_padding $sm_padding;
     }
 
+    .header-video {
+      overflow: hidden;
+
+      video {
+        width: 200%;
+        margin-left: -50%;
+      }
+    }
+
     .get-started {
       @include get-started-prev-next-arrows(100px, 30px, 0);
     }
@@ -74,6 +92,15 @@
 
     .max-width-container {
       padding: 0 $xs_padding $xs_padding $xs_padding;
+    }
+
+    .header-video {
+      overflow: hidden;
+
+      video {
+        width: 300%;
+        margin-left: -100%;
+      }
     }
 
     h1 {
