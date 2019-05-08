@@ -48,6 +48,28 @@ $(function() {
         }
       });
 
+      $('.get-started-step-icon').on('click', function() {
+        step_transition($(this).attr('data-step'));
+      })
+
+      $(document).on('keyup', function(e) {
+        switch(e.which) {
+          case 37: // left
+            e.preventDefault();
+            if (current_step > 1) {
+              step_transition(--current_step);
+            }
+            break;
+
+          case 39: // right
+            e.preventDefault();
+            if (current_step < steps) {
+              step_transition(++current_step);
+            }
+            break;
+        }
+      });
+
       step_transition(current_step);
     }
   }
