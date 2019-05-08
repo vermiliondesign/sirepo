@@ -78,7 +78,7 @@
       width: 100%;
       text-align: center; }
     .landing .btn-link::after {
-      content: '+'; }
+      content: '\00A0+'; }
   .landing code {
     font-family: "Courier New", Courier, monospace;
     color: black;
@@ -172,7 +172,7 @@
       max-width: 1300px;
       text-align: left; }
     .landing .content-block a::after {
-      content: ' +'; }
+      content: '\00A0+'; }
     .landing .content-block .gradient-rule {
       height: 6px;
       margin-bottom: 40px;
