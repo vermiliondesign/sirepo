@@ -150,8 +150,27 @@
       padding: 10px 75px;
       font-size: 17px; }
   .landing .header-decoration {
-    background-color: white;
-    height: 54px; }
+    position: relative;
+    display: flex; }
+    .landing .header-decoration .fill-white {
+      background-color: white;
+      flex-grow: 1; }
+    .landing .header-decoration::before {
+      content: '';
+      position: absolute;
+      background-image: url("/img/curve-header-left.png");
+      bottom: 2px;
+      left: -60px;
+      height: 302px;
+      width: 385px; }
+    .landing .header-decoration::after {
+      content: '';
+      position: absolute;
+      background-image: url("/img/curve-header-right.png");
+      bottom: 25px;
+      right: -60px;
+      height: 279px;
+      width: 258px; }
   .landing .content-block {
     padding: 64px 0 128px 0;
     color: black;
