@@ -613,8 +613,12 @@
     .landing .simulations .simulation-items {
       flex-direction: column; }
     .landing .simulations .simulation-item ~ .simulation-item {
-      padding-top: 40px;
       margin-top: 40px; }
+      .landing .simulations .simulation-item ~ .simulation-item::before {
+        content: '';
+        display: block;
+        border-top: 1px solid #9b9b9b;
+        margin: 0 0 40px 0; }
     .landing .discover {
       padding-bottom: 120px; }
     .landing .get-started {
