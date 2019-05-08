@@ -71,6 +71,21 @@ $(function() {
       });
 
       step_transition(current_step);
+
+      var resize_steps = function() {
+        var max_height = 0;
+        $('.get-started-step').each(function(i, step) {
+          if ($(step).outerHeight() > max_height) {
+            max_height = $(step).outerHeight();
+          }
+
+          $('.get-started-steps').height(max_height);
+        })
+      }
+
+      $(window).on('resize', resize_steps);
+
+      resize_steps();
     }
   }
 });

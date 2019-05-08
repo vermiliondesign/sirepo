@@ -1,0 +1,176 @@
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+  $xs_padding: 15px;
+
+  .landing {
+    background-size: auto, 200% auto;
+
+    .max-width-container {
+      padding: 0 $xs_padding $xs_padding $xs_padding;
+    }
+
+    h1 {
+      font-size: 18px;
+    }
+
+    h2 {
+      font-size: 50px;
+    }
+
+    h3 {
+      font-size: 30px;
+    }
+
+    h4 {
+      font-size: 20px;
+    }
+
+    .btn-link {
+      width: 100%;
+      text-align: center;
+    }
+
+    .content-block {
+      padding-top: 20px;
+      padding-bottom: 40px;
+    }
+
+    header {
+      .main-nav {
+        flex-direction: column;
+
+        .nav-items {
+          text-align: center;
+          margin-top: 20px;
+
+          li {
+            display: block;
+          }
+
+          li ~ li {
+            margin-left: 0;
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+
+    .intro {
+      margin-bottom: 40px;
+
+      p {
+        font-size: 18px;
+      }
+    }
+
+    .header-decoration {
+      img {
+        display: none;
+      }
+
+      &::before {
+        display: none;
+      }
+
+      &::after {
+        display: none;
+      }
+    }
+
+    .simulations {
+      .simulation-items {
+        flex-direction: column;
+      }
+    }
+
+    .discover {
+      padding-bottom: 120px;
+    }
+
+    .get-started {
+      background-image: none;
+
+      &::after {
+        display: none;
+      }
+
+      .get-started-intro {
+        display: block;
+      }
+
+      .get-started-step-icons {
+        justify-content: flex-start;
+      }
+
+      .get-started-step-icon {
+        height: 50px;
+        width: 50px;
+        line-height: 50px;
+        border-radius: 25px;
+      }
+
+      .get-started-step-icon ~ .get-started-step-icon{
+        margin-left: 10px;
+      }
+
+      .get-started-step-images-wrapper {
+        width: 80%;
+        margin: 25px auto 0 auto;
+      }
+
+      .get-started-step {
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+
+      .simulation-demos {
+        article ~ article {
+          margin-top: 40px;
+        }
+
+        a {
+          margin-top: 15px;
+        }
+      }
+    }
+
+    .doe-footer {
+      .doe-footer-content {
+        flex-direction: column;
+        text-align: center;
+
+        p {
+          margin: 15px 0 0 0;
+        }
+      }
+    }
+
+    footer {
+      .footer-content {
+        flex-direction: column;
+      }
+
+      .footer-sirepo {
+        margin: 0;
+      }
+
+      .footer-nav {
+        margin: 25px 0;
+      }
+
+      .footer-radiasoft {
+        text-align: center;
+      }
+    }
+  }
+}
