@@ -205,7 +205,11 @@
           a {
             color: white;
 
-            &::after {
+            &:hover {
+              color: $blue_nav;
+            }
+
+            &:not(.supported-codes)::after {
               content: none;
             }
           }
@@ -216,8 +220,40 @@
         }
       }
 
-      .supported-codes > * {
-        vertical-align: middle;
+      .supported-codes {
+        position: relative;
+        > * {
+          vertical-align: middle;
+        }
+
+        &:hover {
+          &::after {
+            background-color: $blue_nav;
+          }
+        }
+
+        &::after {
+          content: '';
+          display: inline-block;
+          margin-left: 8px;
+          height: 20px;
+          width: 20px;
+          border-radius: 10px;
+          background-color: white;
+          vertical-align: middle;
+        }
+
+        &::before {
+          content: '';
+          display: inline-block;
+          position: absolute;
+          right: 5px;
+          top: 11px;
+
+          border-top: 7px solid $blue_medium;
+          border-left: 5px solid transparent;
+          border-right: 5px solid transparent;
+        }
       }
     }
   }
