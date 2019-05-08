@@ -1,10 +1,12 @@
 $(function() {
   if ($('body').hasClass('landing')) {
-    $('.landing .supported-codes').on('click', function() {
+    $('.landing .supported-codes').on('click', function(e) {
+      e.preventDefault();
       $('.landing .nav-takeover').addClass('active');
     });
 
-    $('.landing .nav-takeover-close').on('click', function() {
+    $('.landing .nav-takeover-close').on('click', function(e) {
+      e.preventDefault();
       $('.landing .nav-takeover').removeClass('active');
     });
 

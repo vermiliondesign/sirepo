@@ -22,6 +22,47 @@ $gradient_center_light: #7fd0e2;
 
 $header_strip_height: 16px;
 
+@mixin get-started-prev-next-arrows($btn_height, $btn_width, $btn_offset) {
+  .get-started-next,
+  .get-started-prev {
+    position: absolute;
+    top: 50%;
+    margin-top: $btn_height * -.5;
+    border-top: $btn_height * .5 solid transparent;
+    border-bottom: $btn_height * .5 solid transparent;
+
+    cursor: pointer;
+
+    &::after {
+      content: '';
+      position: absolute;
+      margin-top: $btn_height * -.5;
+      border-top: $btn_height * .5 solid transparent;
+      border-bottom: $btn_height * .5 solid transparent;
+    }
+  }
+
+  .get-started-next {
+    border-left: $btn_width solid $blue_line;
+    right: $btn_offset * -1;
+
+    &::after {
+      left: $btn_width * -1 - 1;
+      border-left: $btn_width solid $blue_medium;
+    }
+  }
+
+  .get-started-prev {
+    border-right: $btn_width solid $blue_line;
+    left: $btn_offset * -1;
+
+    &::after {
+      right: $btn_width * -1 - 1;
+      border-right: $btn_width solid $blue_medium;
+    }
+  }
+}
+
 .landing {
   background-image: linear-gradient(to right, $gradient_left 0%,$gradient_center 50%,$gradient_right 100%);
   background-position: center #{$header_strip_height};
@@ -81,6 +122,7 @@ $header_strip_height: 16px;
       display: block;
       height: 14px;
       width: 68px;
+      margin-bottom: 5px;
 
       background-image: url('/img/heading-decoration.png');
       background-position: center center;
@@ -448,6 +490,11 @@ $header_strip_height: 16px;
 
     .perks-items {
       text-align: center;
+
+      img {
+        width: 80%;
+        max-width: 186px;
+      }
     }
   }
 
@@ -491,49 +538,9 @@ $header_strip_height: 16px;
     .get-started-intro {
       display: flex;
       position: relative;
-
-      $btn_height: 100px;
-      $btn_width: 30px;
-      $btn_offset: 65px;
-      .get-started-next,
-      .get-started-prev {
-        position: absolute;
-        top: 50%;
-        margin-top: $btn_height * -.5;
-        border-top: $btn_height * .5 solid transparent;
-        border-bottom: $btn_height * .5 solid transparent;
-
-        cursor: pointer;
-
-        &::after {
-          content: '';
-          position: absolute;
-          margin-top: $btn_height * -.5;
-          border-top: $btn_height * .5 solid transparent;
-          border-bottom: $btn_height * .5 solid transparent;
-        }
-      }
-
-      .get-started-next {
-        border-left: $btn_width solid $blue_line;
-        right: $btn_offset * -1;
-
-        &::after {
-          left: $btn_width * -1 - 1;
-          border-left: $btn_width solid $blue_medium;
-        }
-      }
-
-      .get-started-prev {
-        border-right: $btn_width solid $blue_line;
-        left: $btn_offset * -1;
-
-        &::after {
-          right: $btn_width * -1 - 1;
-          border-right: $btn_width solid $blue_medium;
-        }
-      }
     }
+
+    @include get-started-prev-next-arrows(100px, 30px, 65px);
 
     .get-started-copy {
       display: flex;
@@ -615,7 +622,13 @@ $header_strip_height: 16px;
     }
 
     .simulation-demos {
+      display: flex;
       margin-top: 20px;
+
+      article {
+        display: flex;
+        flex-direction: column;
+      }
 
       img {
         width: calc(100% - 8px);
@@ -623,6 +636,10 @@ $header_strip_height: 16px;
       }
 
       a {
+        display: flex;
+        flex-grow: 1;
+        align-items: center;
+        justify-content: center;
         margin-top: 25px;
       }
     }
