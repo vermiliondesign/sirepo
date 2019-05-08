@@ -130,18 +130,20 @@
     font-size: 16px;
   }
 
+  ul {
+    padding: 0;
+  }
+
   a {
     text-transform: uppercase;
     font-weight: bold;
     letter-spacing: 1px;
+    color: $orange;
 
     &:hover {
       text-decoration: none;
+      color: $blue_medium;
     }
-  }
-
-  ul {
-    padding: 0;
   }
 
   .btn-link {
@@ -156,6 +158,11 @@
       padding-right: 10px;
       width: 100%;
       text-align: center;
+    }
+
+    &:hover {
+      color: white;
+      background-color: $blue_medium;
     }
 
     &::after {
@@ -391,6 +398,10 @@
       margin-top: 25px;
       padding: 10px 75px;
       font-size: 17px;
+
+      &:hover {
+        background-color: $teal;
+      }
     }
   }
 
@@ -457,8 +468,6 @@
         width: calc(50% - 10px);
         padding: 10px 0;
 
-        background-color: $orange;
-        color: white;
         text-align: center;
       }
     }
@@ -483,10 +492,6 @@
       z-index: 1;
     }
 
-    a {
-      color: $orange;
-    }
-
     .explore-items {
       position: relative;
       z-index: 2;
@@ -507,10 +512,6 @@
       & > article {
         background-color: $gray_light;
         padding: 35px;
-
-        a {
-          color: $orange;
-        }
 
         & ~ article {
           margin-top: 12px;
@@ -595,6 +596,10 @@
       }
     }
 
+    .btn-link:hover {
+      background-color: $teal;
+    }
+
     .row {
       z-index: 2;
     }
@@ -670,6 +675,10 @@
       &.active {
         color: $blue_medium;
         background-color: white;
+      }
+
+      &:not(.active):hover {
+        background-color: $orange;
       }
     }
 

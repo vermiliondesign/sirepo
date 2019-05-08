@@ -58,14 +58,16 @@
     font-size: 16px; }
   .landing p, .landing li {
     font-size: 16px; }
+  .landing ul {
+    padding: 0; }
   .landing a {
     text-transform: uppercase;
     font-weight: bold;
-    letter-spacing: 1px; }
+    letter-spacing: 1px;
+    color: #ff6000; }
     .landing a:hover {
-      text-decoration: none; }
-  .landing ul {
-    padding: 0; }
+      text-decoration: none;
+      color: #005eb4; }
   .landing .btn-link {
     display: inline-block;
     color: white;
@@ -77,6 +79,9 @@
       padding-right: 10px;
       width: 100%;
       text-align: center; }
+    .landing .btn-link:hover {
+      color: white;
+      background-color: #005eb4; }
     .landing .btn-link::after {
       content: '\00A0+'; }
   .landing code {
@@ -223,6 +228,8 @@
       margin-top: 25px;
       padding: 10px 75px;
       font-size: 17px; }
+      .landing .intro .btn-link:hover {
+        background-color: #00a2c5; }
   .landing .header-decoration {
     position: relative;
     display: flex; }
@@ -266,8 +273,6 @@
       .landing .simulations .simulation-links a {
         width: calc(50% - 10px);
         padding: 10px 0;
-        background-color: #ff6000;
-        color: white;
         text-align: center; }
   .landing .explore {
     background-color: #d9f1f6; }
@@ -282,8 +287,6 @@
       width: 1299px;
       max-width: 100%;
       z-index: 1; }
-    .landing .explore a {
-      color: #ff6000; }
     .landing .explore .explore-items {
       position: relative;
       z-index: 2; }
@@ -296,8 +299,6 @@
     .landing .news-announcements .news-announcements-items > article {
       background-color: #e5e5e5;
       padding: 35px; }
-      .landing .news-announcements .news-announcements-items > article a {
-        color: #ff6000; }
       .landing .news-announcements .news-announcements-items > article ~ article {
         margin-top: 12px; }
   .landing .discover {
@@ -348,6 +349,8 @@
       color: white; }
     .landing .get-started h3::before {
       background-image: url("/img/heading-decoration-dark.png"); }
+    .landing .get-started .btn-link:hover {
+      background-color: #00a2c5; }
     .landing .get-started .row {
       z-index: 2; }
     .landing .get-started .get-started-intro {
@@ -424,6 +427,8 @@
       .landing .get-started i.active {
         color: #005eb4;
         background-color: white; }
+      .landing .get-started i:not(.active):hover {
+        background-color: #ff6000; }
     .landing .get-started .simulation-demos-intro {
       margin-top: 60px; }
       .landing .get-started .simulation-demos-intro::before {
