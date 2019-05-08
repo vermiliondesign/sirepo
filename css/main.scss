@@ -723,6 +723,9 @@
   }
 
   footer {
+    position: relative;
+    z-index: 2; // To prevent explore curve lines from overlapping if there's no news articles
+
     background-color: $gray_dark;
     background-image: url('/img/footer-bg.jpg');
     background-size: cover;
