@@ -24,7 +24,7 @@ $(function() {
       var steps = 4;
       var current_step = 1;
 
-      var step_transition = function(current_step) {
+      var step_transition = function() {
         $('.get-started-step-images').css('transform', 'translateX(' + (100 * current_step - 100) / -4 + '%)');
 
         $('.get-started-step-icon, .get-started-step').removeClass('active');
@@ -43,18 +43,21 @@ $(function() {
 
       $('.get-started-next').on('click', function() {
         if (current_step < steps) {
-          step_transition(++current_step);
+          current_step++;
+          step_transition();
         }
       });
 
       $('.get-started-prev').on('click', function() {
         if (current_step > 1) {
-          step_transition(--current_step);
+          current_step--;
+          step_transition();
         }
       });
 
       $('.get-started-step-icon').on('click', function() {
-        step_transition($(this).attr('data-step'));
+        current_step = $(this).attr('data-step')
+        step_transition();
       })
 
       $(document).on('keyup', function(e) {
@@ -62,14 +65,16 @@ $(function() {
           case 37: // left
             e.preventDefault();
             if (current_step > 1) {
-              step_transition(--current_step);
+              current_step--;
+              step_transition();
             }
             break;
 
           case 39: // right
             e.preventDefault();
             if (current_step < steps) {
-              step_transition(++current_step);
+              current_step--;
+              step_transition();
             }
             break;
         }
@@ -92,5 +97,7 @@ $(function() {
 
       resize_steps();
     }
+
+
   }
 });
