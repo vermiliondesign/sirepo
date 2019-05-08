@@ -336,6 +336,7 @@ $header_strip_height: 16px;
 
     .gradient-rule {
       height: 6px;
+      margin-bottom: 40px;
       border: none;
 
       background: linear-gradient(to right, $gradient_right 0%,$gradient_center 50%,$gradient_left 100%);
@@ -429,6 +430,8 @@ $header_strip_height: 16px;
 
       p {
         flex-grow: 1;
+        margin-top: 5px;
+        margin-bottom: 25px;
       }
     }
 
@@ -457,6 +460,10 @@ $header_strip_height: 16px;
     .explore-items {
       & > article:nth-child(2n + 1) {
         clear: both;
+      }
+
+      article {
+        margin-bottom: 25px;
       }
     }
   }

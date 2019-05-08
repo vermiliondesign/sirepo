@@ -249,3 +249,17 @@
     }
   }
 }
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 479px) {
+  .landing {
+    .header-video {
+      overflow: hidden;
+
+      video {
+        width: 450%;
+        margin-left: -175%;
+      }
+    }
+  }
+}
