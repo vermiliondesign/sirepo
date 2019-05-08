@@ -3,16 +3,19 @@ $(function() {
     $('.landing .supported-codes').on('click', function(e) {
       e.preventDefault();
       $('.landing .nav-takeover').addClass('active');
+      $('body').css('overflow', 'hidden');
     });
 
     $('.landing .nav-takeover-close').on('click', function(e) {
       e.preventDefault();
       $('.landing .nav-takeover').removeClass('active');
+      $('body').css('overflow', 'auto');
     });
 
     $(document).on('keyup', function(e) {
       if (e.which == 27) {
         $('.landing .nav-takeover').removeClass('active');
+        $('body').css('overflow', 'auto');
       }
     });
 
