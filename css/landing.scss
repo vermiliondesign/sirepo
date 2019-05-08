@@ -4,6 +4,8 @@ $blue_medium: #005eb4;
 $blue_light: #d9f1f6;
 $blue_nav: #4cdfff;
 $blue_line: #74a7d6;
+$blue_shadow: #004186;
+
 $teal: #00a2c5;
 $orange: #ff6000;
 $gray_light: #e5e5e5;
@@ -196,12 +198,18 @@ $header_strip_height: 16px;
     position: fixed;
     top: 0;
     left: 0;
-    height: 100vh;
+    height: 0;
     width: 100vw;
+    overflow: hidden;
     z-index: 9999;
-    padding-top: 160px;
 
     background: linear-gradient(to right, $gradient_right 0%,$gradient_center 50%,$gradient_left 100%);
+
+    transition: height 500ms;
+
+    &.active {
+      height: 100vh;
+    }
 
     .nav-takeover-close {
       position: absolute;
@@ -212,6 +220,7 @@ $header_strip_height: 16px;
     .nav-takeover-content {
       width: 100%;
       text-align: center;
+      margin-top: 160px;
 
       ul {
         padding: 0;
@@ -462,16 +471,12 @@ $header_strip_height: 16px;
       }
     }
 
-    img {
-      width: calc(100% - 8px);
-      box-shadow: 8px 8px rgba($blue_dark, 0.5);
-    }
-
     .row {
       z-index: 2;
     }
 
     .get-started-intro {
+      display: flex;
       position: relative;
 
       $btn_height: 100px;
@@ -517,9 +522,49 @@ $header_strip_height: 16px;
       }
     }
 
-    .get-started-steps {
+    .get-started-copy {
       display: flex;
-      justify-content: space-between
+      flex-direction: column;
+    }
+
+    .get-started-step-icons {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .get-started-steps {
+      position: relative;
+      flex-grow: 1;
+    }
+
+    .get-started-step {
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding-top: 20px;
+
+      transition: opacity 500ms;
+
+      &.active {
+        opacity: 1;
+      }
+    }
+
+    .get-started-step-images-wrapper {
+      overflow: hidden;
+    }
+
+    .get-started-step-images {
+      display: flex;
+      width: 400%;
+
+      transition: transform 500ms;
+
+      img {
+        display: block;
+        width: 25%;
+      }
     }
 
     i {
@@ -557,6 +602,11 @@ $header_strip_height: 16px;
 
     .simulation-demos {
       margin-top: 20px;
+
+      img {
+        width: calc(100% - 8px);
+        box-shadow: 8px 8px $blue_shadow;
+      }
 
       a {
         margin-top: 25px;

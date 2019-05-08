@@ -35,7 +35,7 @@
         </ul>
       </nav>
 
-      <nav class="nav-takeover" style="display: none">
+      <nav class="nav-takeover">
         <a href="#" class="nav-takeover-close"><img src="/img/nav-close.png" alt="Close"/></a>
         <div class="nav-takeover-content">
           <h6>Supported Codes</h6>
@@ -170,25 +170,65 @@
             <hr class="gradient-rule light" />
 
             <div class="row get-started-intro">
-              <div class="col-xs-4">
+              <div class="col-xs-4 get-started-copy">
+                <div class="get-started-step-icons">
+                  <i class="get-started-step-icon active" data-step="1">1</i>
+                  <i class="get-started-step-icon" data-step="2">2</i>
+                  <i class="get-started-step-icon" data-step="3">3</i>
+                  <i class="get-started-step-icon" data-step="4">4</i>
+                </div>
+
                 <div class="get-started-steps">
-                  <i class="get-started-step-icon active">1</i>
-                  <i class="get-started-step-icon">2</i>
-                  <i class="get-started-step-icon">3</i>
-                  <i class="get-started-step-icon">4</i>
+                  <article class="get-started-step active" data-step="1">
+                    <h4>
+                      Copy and edit an example simulation
+                    </h4>
+                    <p>
+                      No need to start from scratch. Simply copy an existing simulation and tinker as needed.
+                    </p>
+                  </article>
+
+                  <article class="get-started-step" data-step="2">
+                    <h4>
+                      Create a new simulation
+                    </h4>
+                    <p>
+                      Have a specific simulation in mind? Use your workspace to start a new project from scratch.
+                    </p>
+                  </article>
+
+                  <article class="get-started-step" data-step="3">
+                    <h4>
+                      Import and export python
+                    </h4>
+                    <p>
+                      We developed Sirepo to be easy to access and use. That means supporting programming languages you already use.
+                    </p>
+                  </article>
+
+                  <article class="get-started-step" data-step="4">
+                    <h4>
+                      Save in your workspace
+                    </h4>
+                    <p>
+                      Sign-in to save your work and come back to it anytime. If you’re finished, simply export, download, and share work with your colleagues.
+                    </p>
+                  </article>
                 </div>
-                <div class="getting-started-step active">
-                  <h4>
-                    Copy and edit an example simulation
-                  </h4>
-                  <p>
-                    No need to start from scratch. Simply copy an existing simulation and tinker as needed.
-                  </p>
+
+                <div>
+                  <a href="#" class="btn-link">Launch</a>
                 </div>
-                <a class="btn-link">Launch</a>
               </div>
               <div class="col-xs-7 col-xs-offset-1">
-                <img src="/img/get-started-step-1.png" alt="Get Started Step 1" />
+                <div class="get-started-step-images-wrapper">
+                  <div class="get-started-step-images">
+                    <img src="/img/get-started-step-1.png" alt="Get Started Step 1" data-step="1"/>
+                    <img src="/img/get-started-step-2.png" alt="Get Started Step 2" data-step="2"/>
+                    <img src="/img/get-started-step-3.png" alt="Get Started Step 3" data-step="3"/>
+                    <img src="/img/get-started-step-4.png" alt="Get Started Step 4" data-step="4"/>
+                  </div>
+                </div>
               </div>
 
               <div class="get-started-next"></div>
