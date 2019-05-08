@@ -112,5 +112,68 @@ $(function() {
 
       resize_steps();
     }
+
+    // Populate news if it's on the page
+    if ($('.news-announcements').length > 0) {
+      // Use jQuery to load files here since it's already installed
+
+      // Fetch article index
+      $.get(
+        '/news/article-index.json',
+        function(articles) {
+          var converter = new showdown.Converter();
+          var articles_html = [];
+          var promises = [];
+
+          var now = new Date();
+          now.setHours(0);
+          now.setMinutes(0);
+          now.setSeconds(0);
+
+          // Fetch each article
+          $.each(articles, function(index, article) {
+            var start_date, end_date;
+
+            if (article.start_date) {
+              var start_date_parts = article.start_date.split('/');
+              start_date  = new Date(start_date_parts[0], parseInt(start_date_parts[1]) - 1, start_date_parts[2]);
+            } else {
+              start_date = now;
+            }
+
+            if (article.end_date) {
+              var end_date_parts = article.end_date.split('/');
+              end_date    = new Date(end_date_parts[0], parseInt(end_date_parts[1]) - 1, end_date_parts[2]);
+            } else {
+              end_date = now;
+            }
+
+            if (now >= start_date && now <= end_date) {
+              promises.push(
+                $.get(
+                  '/news/' + article.markdown_file,
+                  function(article_md) {
+                    articles_html[index] = converter.makeHtml(article_md);
+                  }
+                )
+              );
+            }
+          });
+
+          if (promises.length > 0) {
+            $('.news-announcements').removeClass('hidden');
+
+            $.when.apply(this, promises).then(function() {
+              $.each(articles_html, function(index, article_html) {
+                if (article_html) {
+                  $('.news-announcements-items').append('<article>' + article_html + '</article>');
+                }
+              })
+            });
+          }
+        }
+
+      );
+    }
   }
 });
