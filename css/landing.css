@@ -142,7 +142,7 @@
         border-right: 5px solid transparent; }
   .landing .header-video {
     position: absolute;
-    top: 0;
+    top: 16px;
     left: 0;
     width: 100%; }
     .landing .header-video video {
