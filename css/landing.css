@@ -131,7 +131,27 @@
           color: #4cdfff; }
           .landing .nav-takeover .nav-takeover-content ul a:hover {
             color: white; }
+  .landing .content-block {
+    position: relative;
+    padding: 64px 0 128px 0;
+    color: black;
+    text-align: center; }
+    .landing .content-block > .row {
+      display: inline-block;
+      position: relative;
+      width: 100%;
+      max-width: 1300px;
+      text-align: left; }
+    .landing .content-block a::after {
+      content: ' +'; }
+    .landing .content-block .gradient-rule {
+      height: 6px;
+      border: none;
+      background: linear-gradient(to right, #00a1c5 0%, #105dad 50%, #002c54 100%); }
+      .landing .content-block .gradient-rule.light {
+        background: linear-gradient(to right, white 0%, #7fd0e2 50%, #0098c3 100%); }
   .landing .intro {
+    padding-bottom: 0;
     margin-bottom: 160px; }
     .landing .intro::before {
       content: '';
@@ -171,25 +191,6 @@
       right: -60px;
       height: 279px;
       width: 258px; }
-  .landing .content-block {
-    position: relative;
-    padding: 64px 0 128px 0;
-    color: black;
-    text-align: center; }
-    .landing .content-block > .row {
-      display: inline-block;
-      position: relative;
-      width: 100%;
-      max-width: 1300px;
-      text-align: left; }
-    .landing .content-block a::after {
-      content: ' +'; }
-    .landing .content-block .gradient-rule {
-      height: 6px;
-      border: none;
-      background: linear-gradient(to right, #00a1c5 0%, #105dad 50%, #002c54 100%); }
-      .landing .content-block .gradient-rule.light {
-        background: linear-gradient(to right, white 0%, #7fd0e2 50%, #0098c3 100%); }
   .landing .simulations {
     background-color: white; }
     .landing .simulations .simulation-items {
