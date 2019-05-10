@@ -103,7 +103,8 @@
   .landing code {
     font-family: "Courier New", Courier, monospace;
     color: black;
-    background: none; }
+    background: none;
+    padding: 0; }
   .landing hr {
     border-top-color: #9b9b9b; }
   .landing .header-strip {
