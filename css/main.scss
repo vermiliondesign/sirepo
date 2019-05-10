@@ -680,10 +680,27 @@
 
       transition: transform 500ms;
 
-      img {
+      .get-started-step-image-wrapper {
         display: inline-block;
         width: 25%;
         vertical-align: top;
+        padding-bottom: 8px;
+        padding-right: 8px;
+
+        img {
+          width: 100%;
+          box-shadow: 8px 8px $blue_shadow;
+        }
+
+        img.double-image {
+          width: 80%;
+          display: block;
+        }
+
+        img.double-image ~ img.double-image {
+          margin-top: 8px;
+          float: right;
+        }
       }
     }
 

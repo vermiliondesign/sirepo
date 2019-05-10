@@ -81,7 +81,7 @@ $(function() {
           case 39: // right
             e.preventDefault();
             if (current_step < steps) {
-              current_step--;
+              current_step++;
               step_transition();
             }
             break;
