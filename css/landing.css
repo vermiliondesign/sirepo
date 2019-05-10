@@ -10,8 +10,6 @@
   /** End General Styles */ }
   .landing .max-width-container {
     padding: 0 60px 60px 60px; }
-  .landing.particle-accelerators {
-    background-image: linear-gradient(to right, #003160 0%, #105dad 50%, #00a6cb 100%), url("/img/particle-accelerators/header-bg.jpg"); }
   .landing .text-bold {
     font-weight: bold;
     letter-spacing: 1px; }
@@ -160,15 +158,15 @@
         border-top: 7px solid #005eb4;
         border-left: 5px solid transparent;
         border-right: 5px solid transparent; }
-  .landing .header-video {
+  .landing .header-media-wrapper {
     position: absolute;
     top: 16px;
     left: 0;
     width: 100%; }
-    .landing .header-video video {
+    .landing .header-media-wrapper video, .landing .header-media-wrapper img {
       position: relative;
       width: 100%; }
-    .landing .header-video::after {
+    .landing .header-media-wrapper::after {
       content: '';
       position: absolute;
       top: 0;
@@ -540,9 +538,9 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1199px) {
-  .landing .header-video {
+  .landing .header-media-wrapper {
     overflow: hidden; }
-    .landing .header-video video {
+    .landing .header-media-wrapper video, .landing .header-media-wrapper img {
       width: 150%;
       margin-left: -25%; }
   .landing .get-started .get-started-intro {
@@ -590,9 +588,9 @@
 @media only screen and (max-width: 991px) {
   .landing .max-width-container {
     padding: 0 20px 20px 20px; }
-  .landing .header-video {
+  .landing .header-media-wrapper {
     overflow: hidden; }
-    .landing .header-video video {
+    .landing .header-media-wrapper video, .landing .header-media-wrapper img {
       width: 200%;
       margin-left: -50%; }
   .landing .get-started .get-started-next,
@@ -635,9 +633,9 @@
     background-size: auto, 200% auto; }
     .landing .max-width-container {
       padding: 0 15px 15px 15px; }
-    .landing .header-video {
+    .landing .header-media-wrapper {
       overflow: hidden; }
-      .landing .header-video video {
+      .landing .header-media-wrapper video, .landing .header-media-wrapper img {
         width: 300%;
         margin-left: -100%; }
     .landing h1 {
@@ -745,9 +743,9 @@
       text-align: center; } }
 /* Small Devices, Tablets */
 @media only screen and (max-width: 479px) {
-  .landing .header-video {
+  .landing .header-media-wrapper {
     overflow: hidden; }
-    .landing .header-video video {
+    .landing .header-media-wrapper video, .landing .header-media-wrapper img {
       width: 450%;
       margin-left: -175%; } }
 

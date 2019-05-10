@@ -54,10 +54,6 @@
     padding: 0 60px 60px 60px;
   }
 
-  &.particle-accelerators {
-    background-image: linear-gradient(to right, $gradient_left 0%,$gradient_center 50%,$gradient_right 100%), url('/img/particle-accelerators/header-bg.jpg');
-  }
-
   /** General Styles */
   .text-bold {
     font-weight: bold;
@@ -298,13 +294,13 @@
     }
   }
 
-  .header-video {
+  .header-media-wrapper {
     position: absolute;
     top: $header_strip_height;
     left: 0;
     width: 100%;
 
-    video {
+    video, img {
       position: relative;
       width: 100%;
     }

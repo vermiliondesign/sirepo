@@ -3,10 +3,10 @@
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1199px) {
   .landing {
-    .header-video {
+    .header-media-wrapper {
       overflow: hidden;
 
-      video {
+      video, img {
         width: 150%;
         margin-left: -25%;
       }
@@ -53,10 +53,10 @@
       padding: 0 $sm_padding $sm_padding $sm_padding;
     }
 
-    .header-video {
+    .header-media-wrapper {
       overflow: hidden;
 
-      video {
+      video, img {
         width: 200%;
         margin-left: -50%;
       }
@@ -96,10 +96,10 @@
       padding: 0 $xs_padding $xs_padding $xs_padding;
     }
 
-    .header-video {
+    .header-media-wrapper {
       overflow: hidden;
 
-      video {
+      video, img {
         width: 300%;
         margin-left: -100%;
       }
@@ -273,10 +273,10 @@
 /* Small Devices, Tablets */
 @media only screen and (max-width : 479px) {
   .landing {
-    .header-video {
+    .header-media-wrapper {
       overflow: hidden;
 
-      video {
+      video, img {
         width: 450%;
         margin-left: -175%;
       }
