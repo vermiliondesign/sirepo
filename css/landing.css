@@ -228,6 +228,18 @@
       background: linear-gradient(to right, #00a6cb 0%, #105dad 50%, #003160 100%); }
       .landing .content-block .gradient-rule.light {
         background: linear-gradient(to right, white 0%, #7fd0e2 50%, #0098c3 100%); }
+    .landing .content-block ul {
+      list-style: none;
+      padding-left: 20px; }
+      .landing .content-block ul li::before {
+        content: "\2022";
+        color: #00a2c5;
+        display: inline-block;
+        font-weight: bold;
+        width: 20px;
+        margin-left: -20px; }
+      .landing .content-block ul li ~ li {
+        margin-top: 10px; }
   .landing .intro {
     padding-bottom: 0;
     margin-bottom: 160px; }
@@ -483,18 +495,6 @@
   .landing .publications {
     background-color: white;
     padding-bottom: 40px; }
-    .landing .publications ul {
-      list-style: none;
-      padding-left: 20px; }
-      .landing .publications ul li::before {
-        content: "\2022";
-        color: #00a2c5;
-        display: inline-block;
-        font-weight: bold;
-        width: 20px;
-        margin-left: -20px; }
-      .landing .publications ul li ~ li {
-        margin-top: 10px; }
   .landing .doe-footer {
     background-color: white;
     padding-bottom: 80px; }
@@ -511,6 +511,16 @@
         margin: 0 0 0 45px;
         font-size: 12px;
         color: #9b9b9b; }
+  .landing .privacy, .landing .terms {
+    background-color: white; }
+    .landing .privacy a, .landing .terms a {
+      text-transform: none;
+      letter-spacing: 0;
+      font-weight: normal; }
+    .landing .privacy a::after, .landing .terms a::after {
+      display: none; }
+    .landing .privacy h4, .landing .terms h4 {
+      margin-top: 50px; }
   .landing footer {
     position: relative;
     z-index: 2;
