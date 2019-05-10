@@ -18,7 +18,7 @@
       }
 
       .get-started-step-icons {
-        justify-content: flex-start;
+        justify-content: center;
       }
 
       .get-started-step-icon ~ .get-started-step-icon{
@@ -40,6 +40,13 @@
       }
 
       @include get-started-prev-next-arrows(100px, 30px, -25px);
+
+      i {
+        height: 50px;
+        width: 50px;
+        line-height: 50px;
+        border-radius: 25px;
+      }
     }
   }
 }
@@ -47,7 +54,7 @@
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 991px) {
   .landing {
-    $sm_padding: 20px;
+    $sm_padding: 30px;
 
     .max-width-container {
       padding: 0 $sm_padding $sm_padding $sm_padding;
@@ -64,6 +71,14 @@
 
     .get-started {
       @include get-started-prev-next-arrows(100px, 30px, 0);
+
+      .get-started-step {
+        width: 100%;
+      }
+
+      .get-started-copy {
+        text-align: center;
+      }
     }
 
     header {
@@ -231,13 +246,6 @@
         a {
           margin-top: 15px;
         }
-      }
-
-      .get-started-step-icon {
-        height: 50px;
-        width: 50px;
-        line-height: 50px;
-        border-radius: 25px;
       }
 
       @include get-started-prev-next-arrows(60px, 15px, 0);

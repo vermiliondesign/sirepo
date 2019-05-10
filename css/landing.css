@@ -585,7 +585,7 @@
   .landing .get-started .get-started-intro {
     display: block; }
   .landing .get-started .get-started-step-icons {
-    justify-content: flex-start; }
+    justify-content: center; }
   .landing .get-started .get-started-step-icon ~ .get-started-step-icon {
     margin-left: 10px; }
   .landing .get-started .get-started-step-images-responsive-wrapper {
@@ -622,11 +622,16 @@
     left: 25px; }
     .landing .get-started .get-started-prev::after {
       right: -32px;
-      border-right: 30px solid #005eb4; } }
+      border-right: 30px solid #005eb4; }
+  .landing .get-started i {
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    border-radius: 25px; } }
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 991px) {
   .landing .max-width-container {
-    padding: 0 20px 20px 20px; }
+    padding: 0 30px 30px 30px; }
   .landing .header-media-wrapper {
     overflow: hidden; }
     .landing .header-media-wrapper video, .landing .header-media-wrapper img {
@@ -659,6 +664,10 @@
     .landing .get-started .get-started-prev::after {
       right: -32px;
       border-right: 30px solid #005eb4; }
+  .landing .get-started .get-started-step {
+    width: 100%; }
+  .landing .get-started .get-started-copy {
+    text-align: center; }
   .landing header .main-nav .nav-items {
     margin-top: 20px; }
     .landing header .main-nav .nav-items li {
@@ -737,11 +746,6 @@
           margin-top: 40px; }
         .landing .get-started .simulation-demos a {
           margin-top: 15px; }
-      .landing .get-started .get-started-step-icon {
-        height: 50px;
-        width: 50px;
-        line-height: 50px;
-        border-radius: 25px; }
       .landing .get-started .get-started-next,
       .landing .get-started .get-started-prev {
         position: absolute;
