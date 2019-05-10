@@ -302,8 +302,10 @@
       display: flex;
       justify-content: space-between; }
       .landing .simulations .simulation-links a {
+        display: flex;
+        align-items: center;
         width: calc(50% - 10px);
-        padding: 10px 0;
+        padding: 10px;
         text-align: center; }
   .landing .explore {
     background-color: #d9f1f6; }
@@ -669,7 +671,7 @@
   .landing {
     background-size: auto, 200% auto; }
     .landing .max-width-container {
-      padding: 0 15px 15px 15px; }
+      padding: 0 0 0 0; }
     .landing .header-media-wrapper {
       overflow: hidden; }
       .landing .header-media-wrapper video, .landing .header-media-wrapper img {
@@ -693,6 +695,8 @@
       flex-direction: column; }
       .landing header .main-nav .nav-items {
         text-align: center; }
+    .landing header .home-link {
+      padding: 0 20px; }
     .landing .nav-takeover .nav-takeover-close img {
       height: 30px;
       width: 30px; }
