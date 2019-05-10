@@ -592,7 +592,7 @@
     position: relative; }
   .landing .get-started .get-started-step-images-wrapper {
     width: 80%;
-    margin: 25px auto 0 auto; }
+    margin: 25px auto 25px auto; }
   .landing .get-started .get-started-step {
     padding-top: 10px;
     padding-bottom: 10px; }
