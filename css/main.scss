@@ -42,6 +42,12 @@
 }
 
 .landing {
+  -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smooth: always;
+  text-rendering: optimizeLegibility;
+
   background-image: linear-gradient(to right, $gradient_left 0%,$gradient_center 50%,$gradient_right 100%);
   background-position: center #{$header_strip_height};
   background-size: 100% auto;
@@ -158,8 +164,17 @@
       text-align: center;
     }
 
+    &::after {
+      display: none;
+    }
+
     span {
       position: relative;
+
+      &::after {
+        content: '\00A0+';
+        position: relative;
+      }
     }
 
     $border_radius: 25px;
@@ -185,11 +200,6 @@
       &::before {
         left: $border_radius * -1;
       }
-    }
-
-    &::after {
-      content: '\00A0+';
-      position: relative;
     }
   }
 
@@ -239,7 +249,7 @@
           text-transform: uppercase;
           vertical-align: middle;
 
-          a {
+          > a {
             color: white;
 
             &:hover {
@@ -592,6 +602,7 @@
       a {
         display: flex;
         align-items: center;
+        justify-content: center;
 
         width: calc(50% - 10px);
         padding: 10px;

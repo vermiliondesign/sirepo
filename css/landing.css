@@ -1,4 +1,9 @@
 .landing {
+  -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smooth: always;
+  text-rendering: optimizeLegibility;
   background-image: linear-gradient(to right, #003160 0%, #105dad 50%, #00a6cb 100%);
   background-position: center 16px;
   background-size: 100% auto;
@@ -79,8 +84,13 @@
       padding-right: 10px;
       width: 100%;
       text-align: center; }
+    .landing .btn-link::after {
+      display: none; }
     .landing .btn-link span {
       position: relative; }
+      .landing .btn-link span::after {
+        content: '\00A0+';
+        position: relative; }
     .landing .btn-link::before {
       content: '';
       position: absolute;
@@ -97,9 +107,6 @@
       color: white; }
       .landing .btn-link:hover::before {
         left: -25px; }
-    .landing .btn-link::after {
-      content: '\00A0+';
-      position: relative; }
   .landing code {
     font-family: "Courier New", Courier, monospace;
     color: black;
@@ -127,11 +134,11 @@
         display: inline-block;
         text-transform: uppercase;
         vertical-align: middle; }
-        .landing header .main-nav .nav-items > li a {
+        .landing header .main-nav .nav-items > li > a {
           color: white; }
-          .landing header .main-nav .nav-items > li a:hover {
+          .landing header .main-nav .nav-items > li > a:hover {
             color: #4cdfff; }
-          .landing header .main-nav .nav-items > li a:not(.supported-codes)::after {
+          .landing header .main-nav .nav-items > li > a:not(.supported-codes)::after {
             content: none; }
       .landing header .main-nav .nav-items > li ~ li {
         margin-left: 25px; }
@@ -354,6 +361,7 @@
       .landing .simulations .simulation-links a {
         display: flex;
         align-items: center;
+        justify-content: center;
         width: calc(50% - 10px);
         padding: 10px;
         text-align: center; }
