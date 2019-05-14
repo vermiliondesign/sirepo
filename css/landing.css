@@ -296,6 +296,24 @@
   .landing .header-decoration {
     position: relative;
     display: flex; }
+    .landing .header-decoration .curve-container {
+      position: relative; }
+      .landing .header-decoration .curve-container::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 2px;
+        background-color: white; }
+      .landing .header-decoration .curve-container::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 2px;
+        background-color: white; }
     .landing .header-decoration .fill-white {
       background-color: white;
       flex-grow: 1; }

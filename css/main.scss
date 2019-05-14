@@ -509,6 +509,31 @@
     position: relative;
     display: flex;
 
+    .curve-container {
+      position: relative;
+
+      // Fix most issues with Edge zoom
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 2px;
+        background-color: white;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 2px;
+        background-color: white;
+      }
+    }
+
     .fill-white {
       background-color: white;
       flex-grow: 1;
