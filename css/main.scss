@@ -360,14 +360,14 @@
     &::after {
       content: '';
       position: absolute;
-      top: 0;
+      bottom: 0;
       left: 0;
       width: 100%;
-      height: 100%;
+      height: 10%;
       background-image: linear-gradient(to right, $gradient_left 0%,$gradient_center 50%,$gradient_right 100%);
 
-      -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 95%, rgba(0,0,0,1) 100%);
-      mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 95%, rgba(0,0,0,1) 100%);
+      -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, black 100%);
+      mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, black 100%);
     }
   }
 
